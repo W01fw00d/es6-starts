@@ -1,4 +1,4 @@
-var businessName = 'Habitissimo';
+let businessName = 'Habitissimo';
 
 /**
  * getBusinessName
@@ -14,7 +14,7 @@ var businessName = 'Habitissimo';
  */
 function getBusinessName() {
   if (!businessName) {
-    var businessName = 'Unknown SL';
+    businessName = 'Unknown SL';
   }
 
   return businessName;
@@ -30,7 +30,7 @@ function getBusinessName() {
  */
 function changeButtonTextOnClick() {
   var nodes = document.getElementsByTagName('button');
-  for (var i = 0; i < nodes.length; i++) {
+  for (let i = 0; i < nodes.length; i++) {
     nodes[i].addEventListener('click', function () {
       this.innerText = i;
     });
