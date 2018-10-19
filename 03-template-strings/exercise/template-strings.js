@@ -22,8 +22,24 @@ const getTopFiveBusinesses = (type = businessType) => bestBusinesses.map((name, 
  * @param {array} top top five business
  */
 const createTopTable = (top = []) => {
-  return ``;
+  return `<table>
+	<tr>
+		<th> Business Name </th> 
+		<th> Business Type </th>
+		<th> Position </th>
+	</tr>
+	<tr>
+		<td> PRUEBA </td>
+	</tr>
+	</table>
+	`;
 }
+
+const createContentRow = (row) => {
+	return ` <td> ${row.businessType} </td> `;
+};
+
+console.log(createTopTable(getTopFiveBusinesses()));
 
 /**
  * Escribir la función que permita generar un tagged template
@@ -40,8 +56,8 @@ const createTaggedTemplate = () => {
 
 
 // UNCOMMENT FOR SERVER SIDE TEST
-/* module.exports = {
+module.exports = {
   getTopFiveBusinesses: getTopFiveBusinesses,
   createTopTable: createTopTable,
   createTaggedTemplate: createTaggedTemplate
-}; */
+};

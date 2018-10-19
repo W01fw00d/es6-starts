@@ -29,7 +29,7 @@ function getBusinessName() {
  * el índice del nodo en el array de elementos encontrados.
  */
 function changeButtonTextOnClick() {
-  var nodes = document.getElementsByTagName('button');
+  const nodes = document.getElementsByTagName('button');
   for (let i = 0; i < nodes.length; i++) {
     nodes[i].addEventListener('click', function () {
       this.innerText = i;

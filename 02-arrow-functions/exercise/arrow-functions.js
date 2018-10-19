@@ -21,11 +21,17 @@ const bestBusinesses = [
   "John el carpintero"
 ];
 
-const ages = [15, 10, 15, 18, 62, 45, 26, 2, 62, 21, 62, 34];
-
 function getTopFiveBusinesses(type) {
-  return [];
-}
+	return bestBusinesses.map((x, y) => {
+        	return {
+                	businessName: x,
+                	businessType: type,
+                	position: y + 1
+        	};
+	});
+};
+
+const ages = [15, 10, 15, 18, 62, 45, 26, 2, 62, 21, 62, 34];
 
 /**
  * Filtrar el array 'ages' obteniendo un nuevo array
@@ -71,7 +77,7 @@ function calculateTax(total, tax) {
 }
 
 // UNCOMMENT FOR SERVER SIDE TEST
-/* module.exports = {
+module.exports = {
   getTopFiveBusinesses: getTopFiveBusinesses,
   getAllAdults: getAllAdults,
   changeButtonTextOnClick: changeButtonTextOnClick,
@@ -79,4 +85,4 @@ function calculateTax(total, tax) {
   businessType: businessType,
   ages: ages,
   calculateTax: calculateTax,
-}; */
+};
